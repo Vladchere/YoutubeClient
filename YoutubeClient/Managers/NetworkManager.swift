@@ -17,7 +17,7 @@ class NetworkManager {
     private let part = "snippet"
     private let type = "video"
     private let maxResults = 50
-    private let apiKey = "AIzaSyD98q-C0TJ69JfPh1JxKcx3qCKd7gfENBg"
+    private let apiKey = "AIzaSyDe09wh2Epr0kRNoZSRad0AaXym0WIXswY"
     
     func fetchSearchData(query: String, completion: @escaping (SearchList) -> Void) {
         var stringUrl = request
@@ -29,7 +29,6 @@ class NetworkManager {
         stringUrl.append("&key=\(apiKey)")
         
         guard let url = URL(string: stringUrl) else { return }
-        print(url)
             
         URLSession.shared.dataTask(with: url) { (data, _, error)  in
             if let error = error {

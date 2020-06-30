@@ -102,7 +102,6 @@ extension MainTableViewController: UISearchBarDelegate {
         searchText = searchBar.text?.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) ?? ""
         
         NetworkManager.shared.fetchSearchData(query: searchText) { (video) in
-            print(video)
             self.searchList = video.items ?? []
             DispatchQueue.main.async {
                 self.tableView.reloadData()

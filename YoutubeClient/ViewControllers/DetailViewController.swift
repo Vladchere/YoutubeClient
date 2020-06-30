@@ -32,6 +32,7 @@ class DetailViewController: UIViewController {
     private func setUI() {
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
+        
         descriptionTextView.isEditable = false
     }
     
